@@ -1,5 +1,10 @@
+const photos = Array.from(document.querySelectorAll("#randomdiv"));
+
+const scalingImage = (currentPhoto) => {
+  currentPhoto.classList.add("scaleImage");
+};
+
 image = document.getElementById("randomdiv");
-image.classList.add("scaleImage")
 
 // image.addEventListener("click", (Event) => {
 //   scalingImage(Event.target);
