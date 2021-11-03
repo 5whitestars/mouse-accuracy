@@ -13,7 +13,15 @@ function createDiv() {
   image.style.animation = "spin2 4s forwards";
 }
 
+let timeleft = 30;
+let timer = document.querySelector("#timer");
+
 createDiv();
 const interval = setInterval(function () {
   createDiv();
-}, 2000);
+}, 2500);
+
+const hello = setInterval(function () {
+  timeleft = timeleft - 1;
+  timer.innerText = timeleft;
+}, 1000);

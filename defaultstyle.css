@@ -3,6 +3,9 @@ body {
   height: 100vh;
 }
 
+#menu {
+  border: 1px black solid;
+}
 button {
   width: 100px;
   height: 30px;
