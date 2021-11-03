@@ -24,4 +24,8 @@ const interval = setInterval(function () {
 const hello = setInterval(function () {
   timeleft = timeleft - 1;
   timer.innerText = timeleft;
+  if (timeleft == 0) {
+    timer.innerText = "Time is Up";
+    clearInterval(hello);
+  }
 }, 1000);
