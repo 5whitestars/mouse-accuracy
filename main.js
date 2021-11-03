@@ -4,6 +4,7 @@ function createDiv() {
   image.style.width = "100px";
   image.style.height = "100px";
   image.style.background = "red";
+  image.style.borderRadius = "100px";
   var posx = Math.random() * 100;
   var posy = Math.random() * 100;
   image.style.position = "absolute";
@@ -11,7 +12,19 @@ function createDiv() {
   image.style.top = posy + "vh";
   parent.appendChild(image);
   image.style.animation = "spin2 4s forwards";
+
+  image.addEventListener(
+    "click",
+    function () {
+      image.style.display = "none";
+      score++;
+      document.querySelector("#totalhit").innerText = "Total Hit: " + score;
+    },
+    false
+  );
 }
+
+let score = 0;
 
 let timeleft = 30;
 let timer = document.querySelector("#timer");

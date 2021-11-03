@@ -2,6 +2,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: darkslategray;
+  cursor: crosshair;
 }
 
 #menu {
@@ -36,7 +37,7 @@ button {
   padding: 0.46em 1.6em;
   border: 0.1em solid #000000;
   margin: 0 0.2em 0.2em 0;
-  border-radius: 0.12em;
+  border-radius: 0.4em;
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
@@ -52,6 +53,7 @@ button {
   text-shadow: 0 0 2em rgba(255, 255, 255, 1);
   color: #ffffff;
   border-color: #ffffff;
+  cursor: crosshair;
 }
 
 @media all and (max-width: 30em) {
