@@ -47,17 +47,17 @@ let timeleft = 30;
 
 let timer = document.querySelector("#timer");
 
-//createDiv();
+// createDiv();
 const interval = setInterval(function () {
   createDiv();
 }, 2500);
 
 // Makes timer run
-const hello = setInterval(function () {
+const runTimer = setInterval(function () {
   timeleft = timeleft - 1;
-  timer.innerText = timeleft;
+  timer.innerText = "Time Left: " + timeleft;
   if (timeleft == 0) {
     timer.innerText = "Time is Up";
-    clearInterval(hello); // Stops timer code from running once it hits 0
+    clearInterval(runTimer); // Stops timer code from running once it hits 0
   }
 }, 1000);

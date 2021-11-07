@@ -8,12 +8,21 @@ body {
 #menu {
   border: 15px outset indianred;
   background-color: indianred;
-  width: 300px;
-  margin-top: 20px;
-  margin-left: 20px;
+  width: 30%;
+  margin: auto;
+  /*margin-top: 20px;
+  margin-left: 20px;*/
   font-family: "Signika", sans-serif;
   color: navy;
+  text-align: center;
 }
+
+#totalhit {
+}
+
+#timer {
+}
+
 button {
   width: 100px;
   height: 30px;
@@ -37,6 +46,7 @@ button {
   padding: 0.46em 1.6em;
   border: 0.1em solid #000000;
   margin: 0 0.2em 0.2em 0;
+  
   border-radius: 0.4em;
   box-sizing: border-box;
   text-decoration: none;
