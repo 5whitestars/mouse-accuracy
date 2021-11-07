@@ -1,5 +1,5 @@
 function createDiv() {
-  
+
   let image = document.createElement("div");
   let parent = document.querySelector("#parentdiv");
 
@@ -8,15 +8,21 @@ function createDiv() {
   image.style.height = "100px";
   image.style.background = "red";
   image.style.borderRadius = "100px";
-  
+
   // Randomly generating coordinates for image to appear
+
+  function randomNum(a, b) {
+    return a + Math.floor(Math.random() * (b-a))
+  }
+
   var posx = Math.random() * 100;
-  var posy = Math.random() * 100;
+  var posy = (randomNum(document.getElementById('menu').offsetHeight, window.innerHeight) / window.innerHeight) * 100;
+
 
   // Selecting the location where the image will appear
   image.style.position = "absolute";
   image.style.left = posx + "vw";
-  image.style.top = posy + "vh";
+  image.style.top =  posy + "vh";
 
 
   parent.appendChild(image);
