@@ -82,6 +82,14 @@ nav {
   display: none;
 }
 
+#finalaccuracy {
+  display: none;
+}
+
+#startbutton {
+  display: none;
+}
+
 #finalscore {
   display: none;
 }

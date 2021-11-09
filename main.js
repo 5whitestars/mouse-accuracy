@@ -1,7 +1,14 @@
 let gameRunning = true;
 let gameSpeed = 2500;
-let timerSpeed = 1000;
+let timerSpeed = 4;
 let totalcircles = 0;
+
+let dif1 = document.getElementById("dif1");
+let dif2 = document.getElementById("dif2");
+let dif3 = document.getElementById("dif3");
+let dif4 = document.getElementById("dif4");
+
+dif1.style.display = "none";
 
 function createDiv() {
   totalcircles += 1;
@@ -133,6 +140,7 @@ againButton.addEventListener("click", function () {
   endButton.style.display = "block";
   finalkeeper.style.display = "none";
   againButton.style.display = "none";
+  finalaccuracy.style.display = "none";
 
   runInterval();
   //runTimer()
@@ -142,11 +150,6 @@ againButton.addEventListener("click", function () {
 /*----------------------------------------------------- */
 
 let difficulty = "dif1";
-
-let dif1 = document.getElementById("dif1");
-let dif2 = document.getElementById("dif2");
-let dif3 = document.getElementById("dif3");
-let dif4 = document.getElementById("dif4");
 
 let difficulties = [dif1, dif2, dif3, dif4];
 
