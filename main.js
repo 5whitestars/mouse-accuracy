@@ -1,4 +1,5 @@
 let gameRunning = true;
+let gameSpeed = 2500;
 
 function createDiv() {
 
@@ -18,7 +19,8 @@ function createDiv() {
   }
 
   var posx = Math.random() * 100;
-  var posy = (randomNum(document.getElementById('menu').offsetHeight, window.innerHeight) / window.innerHeight) * 100;
+  var posy = (randomNum(document.getElementById('menu').offsetHeight + document.getElementById('nav').offsetHeight, 
+  window.innerHeight) / window.innerHeight) * 100;
 
 
   // Selecting the location where the image will appear
@@ -64,7 +66,7 @@ const interval = setInterval(function () {
   if (gameRunning === false) {
     clearInterval(interval)
   }
-}, 2500);
+}, gameSpeed);
 }
 runInterval()
 
@@ -84,7 +86,7 @@ const runTimer = setInterval(function () {
 }
 runTimer()
 
-/*-----------------------------------------*/
+/*------------------------------------------------------*/
 let endButton = document.getElementById("button5");
 let againButton = document.getElementById('button6');
 let scorekeeper = document.getElementById('totalhit');
@@ -111,6 +113,7 @@ function displayFinalTime() {
 
 }
 
+// Return to game
 againButton.addEventListener('click', function() {
   console.log('click')
   gameRunning = true;
@@ -130,5 +133,54 @@ againButton.addEventListener('click', function() {
   timer.innerText = "Time Left: " + timeleft;
   scorekeeper.innerHTML = "Total hit: " + score;
 })
+
+/*----------------------------------------------------- */
+let difficulty = "dif1"
+
+let dif1 = document.getElementById('dif1');
+let dif2 = document.getElementById('dif2');
+let dif3 = document.getElementById('dif3');
+let dif4 = document.getElementById('dif4');
+
+let difficulties = [dif1, dif2, dif3, dif4];
+
+dif1.addEventListener('click', toggleDifficulty)
+dif2.addEventListener('click', toggleDifficulty)
+dif3.addEventListener('click', toggleDifficulty)
+dif4.addEventListener('click', toggleDifficulty)
+
+function toggleDifficulty() {
+  if (!gameRunning) { // so that you can only change when game is not running
+  // Making the previous difficulty selection appear again
+  for (let i = 0; i < difficulties.length; i++) {
+    if (difficulties[i].id === difficulty) {
+      difficulties[i].style.display = 'inline-block';
+
+    }
+  }
+  // Making the current selected difficulty disappear from menu
+  this.style.padding = '0.25em'
+  
+  this.style.display = "none";
+
+
+  // Changing the current difficulty
+  difficulty = this.id;
+
+  if (difficulty === 'dif1') {
+    gameSpeed = 2500;
+
+  } else if (difficulty === 'dif2') {
+    gameSpeed = 1500;
+
+  } else if (difficulty === 'dif3') {
+    gameSpeed = 900;
+
+  } else if (difficulty === 'dif4') {
+    gameSpeed = 3000;
+
+  }
+}
+}
 
 

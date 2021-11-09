@@ -41,7 +41,7 @@ button {
   }
 }
 
-#button5, #button6 {
+#button5, #button6, #dif1, #dif2, #dif3, #dif4 {
   display: inline-block;
   padding: 0.46em 1.6em;
   border: 0.1em solid #000000;
@@ -57,10 +57,29 @@ button {
   background-color: #ffffff;
   text-align: center;
   transition: all 0.15s;
+  position: relative
+}
+
+/* .container :first-child, .container:nth-child(2), .container:nth-child(3), .container:nth-child(4), .container:nth-child(5) {
+  position: relative;
+  top: 15%;
+} */
+
+#dif1, #dif2, #dif3, #dif4 {
+  padding: 0.25em;
+
+}
+
+nav {
+  text-align: center;
+}
+
+#button5 {
 }
 
 #button6 {
   display: none;
+
 }
 
 #finalscore {

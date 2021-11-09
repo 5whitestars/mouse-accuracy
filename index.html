@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="defaultstyle.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Signika&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="defaultstyle.css" />
 
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="parentdiv"></div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet" />
 
-    <div id="menu">
-      <h1>Mouse Accuracy</h1>
+  <title>Mouse Accuracy</title>
 
-      <h3 id="totalhit">Total Hit: 0</h3>
-      <!--<h3>Total Missed:</h3>-->
-      <h3 id="timer">Time Left: 30</h3>
+  <nav id="nav">
+    <p id="dif1" style="background-color: #78ff03">turtle</p>
+    <a id="dif2" style="background-color: #e6d12e">easy</a>
+    <a id="dif3" style="background-color: #e6532e">hard</a>
+    <a id="dif4" style="background-color: #a200ff">impossible</a>
+  </nav>
+</head>
 
-      <a id="button5" style="background-color: #42cc8c">End Game</a>
+<body>
+  <div id="parentdiv"></div>
 
-      <h3 id="finalscore"></h3>
-      <a id="button6" style="background-color: #42cc8c">Try again</a>
-    </div>
+  <div id="menu" class="container">
+    <h1>Mouse Accuracy</h1>
 
-    <script type="text/javascript" src="main.js"></script>
-  </body>
+    <h3 id="totalhit">Total Hit: 0</h3>
+    <!--<h3>Total Missed:</h3>-->
+    <h3 id="timer">Time Left: 30</h3>
+    <!-- <span>
+      
+      <a id="dif1" style="background-color: #42cc8c">turle</a>
+      <a id="dif2" style="background-color: #42cc8c">easy</a>
+      <a id="dif3" style="background-color: #42cc8c">hard</a>
+    </span> -->
+
+    <a id="button5" style="background-color: #2ce8bc">End Game</a>
+
+    <h3 id="finalscore"></h3>
+    <a id="button6" style="background-color: #2ce8bc">Try again</a>
+  </div>
+
+  <!--
+  <div>
+    <a id="dif1" style="background-color: #42cc8c">turle</a>
+    <a id="dif2" style="background-color: #42cc8c">easy</a>
+    <a id="dif3" style="background-color: #42cc8c">hard</a>
+  </div>
+-->
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
 </html>
