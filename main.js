@@ -1,7 +1,11 @@
 let gameRunning = true;
 let gameSpeed = 2500;
+let timerSpeed = 1000;
+let totalcircles = 0;
 
 function createDiv() {
+  totalcircles += 1;
+
   let image = document.createElement("div");
   let parent = document.querySelector("#parentdiv");
 
@@ -18,19 +22,14 @@ function createDiv() {
   }
 
   var posx = Math.random() * 100;
-<<<<<<< HEAD
-  var posy = (randomNum(document.getElementById('menu').offsetHeight + document.getElementById('nav').offsetHeight, 
-  window.innerHeight) / window.innerHeight) * 100;
-
-=======
   var posy =
     (randomNum(
-      document.getElementById("menu").offsetHeight,
+      document.getElementById("menu").offsetHeight +
+        document.getElementById("nav").offsetHeight,
       window.innerHeight
     ) /
       window.innerHeight) *
     100;
->>>>>>> 27c02d0889cbc9593c9cec220fff4341524e06a9
 
   // Selecting the location where the image will appear
   image.style.position = "absolute";
@@ -45,12 +44,14 @@ function createDiv() {
   }
   console.log(parent.childNodes);
 
-  image.style.animation = "spin2 4s forwards";
+  // Running animation on circle
+  image.style.animation = "spin2 " + timerSpeed + "s" + " forwards";
 
+  // Check to see if image is clicked, if so increase "Total Hit" by 1
   image.addEventListener(
     "click",
     function () {
-      image.style.display = "none";
+      image.style.display = "none"; //hides image
       score++;
       document.querySelector("#totalhit").innerText = "Total Hit: " + score;
     },
@@ -67,21 +68,12 @@ let timer = document.querySelector("#timer");
 // createDiv();
 
 function runInterval() {
-<<<<<<< HEAD
-const interval = setInterval(function () {
-  createDiv();
-  if (gameRunning === false) {
-    clearInterval(interval)
-  }
-}, gameSpeed);
-=======
   const interval = setInterval(function () {
     createDiv();
     if (gameRunning === false) {
       clearInterval(interval);
     }
   }, 2500);
->>>>>>> 27c02d0889cbc9593c9cec220fff4341524e06a9
 }
 runInterval();
 
@@ -107,6 +99,7 @@ let againButton = document.getElementById("button6");
 let scorekeeper = document.getElementById("totalhit");
 let timekeeper = document.getElementById("timer");
 let finalkeeper = document.getElementById("finalscore");
+let finalaccuracy = document.getElementById("finalaccuracy");
 
 endButton.addEventListener("click", function () {
   console.log("click");
@@ -121,18 +114,15 @@ function displayFinalTime() {
   endButton.style.display = "none";
   finalkeeper.style.display = "block";
   againButton.style.display = "block";
+  finalaccuracy.style.display = "block";
 
-  finalkeeper.innerHTML = "Final score: " + score;
+  finalkeeper.innerText = "Final score: " + score;
+  finalaccuracy.innerText =
+    "Accuracy: " + Math.round((score / totalcircles) * 100) + "%";
 }
 
-<<<<<<< HEAD
-// Return to game
-againButton.addEventListener('click', function() {
-  console.log('click')
-=======
 againButton.addEventListener("click", function () {
   console.log("click");
->>>>>>> 27c02d0889cbc9593c9cec220fff4341524e06a9
   gameRunning = true;
 
   score = 0;
@@ -148,59 +138,48 @@ againButton.addEventListener("click", function () {
   //runTimer()
   timer.innerText = "Time Left: " + timeleft;
   scorekeeper.innerHTML = "Total hit: " + score;
-<<<<<<< HEAD
-})
-
+});
 /*----------------------------------------------------- */
-let difficulty = "dif1"
 
-let dif1 = document.getElementById('dif1');
-let dif2 = document.getElementById('dif2');
-let dif3 = document.getElementById('dif3');
-let dif4 = document.getElementById('dif4');
+let difficulty = "dif1";
+
+let dif1 = document.getElementById("dif1");
+let dif2 = document.getElementById("dif2");
+let dif3 = document.getElementById("dif3");
+let dif4 = document.getElementById("dif4");
 
 let difficulties = [dif1, dif2, dif3, dif4];
 
-dif1.addEventListener('click', toggleDifficulty)
-dif2.addEventListener('click', toggleDifficulty)
-dif3.addEventListener('click', toggleDifficulty)
-dif4.addEventListener('click', toggleDifficulty)
+dif1.addEventListener("click", toggleDifficulty);
+dif2.addEventListener("click", toggleDifficulty);
+dif3.addEventListener("click", toggleDifficulty);
+dif4.addEventListener("click", toggleDifficulty);
 
 function toggleDifficulty() {
-  if (!gameRunning) { // so that you can only change when game is not running
-  // Making the previous difficulty selection appear again
-  for (let i = 0; i < difficulties.length; i++) {
-    if (difficulties[i].id === difficulty) {
-      difficulties[i].style.display = 'inline-block';
+  if (!gameRunning) {
+    // so that you can only change when game is not running
+    // Making the previous difficulty selection appear again
+    for (let i = 0; i < difficulties.length; i++) {
+      if (difficulties[i].id === difficulty) {
+        difficulties[i].style.display = "inline-block";
+      }
+    }
+    // Making the current selected difficulty disappear from menu
+    this.style.padding = "0.25em";
 
+    this.style.display = "none";
+
+    // Changing the current difficulty
+    difficulty = this.id;
+
+    if (difficulty === "dif1") {
+      timerSpeed = 4;
+    } else if (difficulty === "dif2") {
+      timerSpeed = 3;
+    } else if (difficulty === "dif3") {
+      timerSpeed = 2;
+    } else if (difficulty === "dif4") {
+      timerSpeed = 1;
     }
   }
-  // Making the current selected difficulty disappear from menu
-  this.style.padding = '0.25em'
-  
-  this.style.display = "none";
-
-
-  // Changing the current difficulty
-  difficulty = this.id;
-
-  if (difficulty === 'dif1') {
-    gameSpeed = 2500;
-
-  } else if (difficulty === 'dif2') {
-    gameSpeed = 1500;
-
-  } else if (difficulty === 'dif3') {
-    gameSpeed = 900;
-
-  } else if (difficulty === 'dif4') {
-    gameSpeed = 3000;
-
-  }
 }
-}
-
-
-=======
-});
->>>>>>> 27c02d0889cbc9593c9cec220fff4341524e06a9

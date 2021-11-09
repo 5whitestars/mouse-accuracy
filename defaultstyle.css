@@ -35,12 +35,12 @@ button {
   }
 }
 
-<<<<<<< HEAD
-#button5, #button6, #dif1, #dif2, #dif3, #dif4 {
-=======
 #button5,
-#button6 {
->>>>>>> 27c02d0889cbc9593c9cec220fff4341524e06a9
+#button6,
+#dif1,
+#dif2,
+#dif3,
+#dif4 {
   display: inline-block;
   padding: 0.46em 1.6em;
   border: 0.1em solid #000000;
@@ -56,7 +56,7 @@ button {
   background-color: #ffffff;
   text-align: center;
   transition: all 0.15s;
-  position: relative
+  position: relative;
 }
 
 /* .container :first-child, .container:nth-child(2), .container:nth-child(3), .container:nth-child(4), .container:nth-child(5) {
@@ -64,9 +64,11 @@ button {
   top: 15%;
 } */
 
-#dif1, #dif2, #dif3, #dif4 {
+#dif1,
+#dif2,
+#dif3,
+#dif4 {
   padding: 0.25em;
-
 }
 
 nav {
@@ -78,7 +80,6 @@ nav {
 
 #button6 {
   display: none;
-
 }
 
 #finalscore {
