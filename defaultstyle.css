@@ -41,12 +41,13 @@ button {
   }
 }
 
-#button5, #button6 {
+#button5,
+#button6 {
   display: inline-block;
   padding: 0.46em 1.6em;
   border: 0.1em solid #000000;
   margin: 0 0.2em 0.2em 0;
-  
+
   border-radius: 0.4em;
   box-sizing: border-box;
   text-decoration: none;
@@ -67,7 +68,8 @@ button {
   display: none;
 }
 
-#button5:hover, #button6:hover {
+#button5:hover,
+#button6:hover {
   text-shadow: 0 0 2em rgba(255, 255, 255, 1);
   color: #ffffff;
   border-color: #ffffff;
