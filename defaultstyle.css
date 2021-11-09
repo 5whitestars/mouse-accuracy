@@ -17,12 +17,6 @@ body {
   text-align: center;
 }
 
-#totalhit {
-}
-
-#timer {
-}
-
 button {
   width: 100px;
   height: 30px;
@@ -41,12 +35,17 @@ button {
   }
 }
 
+<<<<<<< HEAD
 #button5, #button6, #dif1, #dif2, #dif3, #dif4 {
+=======
+#button5,
+#button6 {
+>>>>>>> 27c02d0889cbc9593c9cec220fff4341524e06a9
   display: inline-block;
   padding: 0.46em 1.6em;
   border: 0.1em solid #000000;
   margin: 0 0.2em 0.2em 0;
-  
+
   border-radius: 0.4em;
   box-sizing: border-box;
   text-decoration: none;
@@ -86,7 +85,8 @@ nav {
   display: none;
 }
 
-#button5:hover, #button6:hover {
+#button5:hover,
+#button6:hover {
   text-shadow: 0 0 2em rgba(255, 255, 255, 1);
   color: #ffffff;
   border-color: #ffffff;
